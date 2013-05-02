@@ -35,4 +35,4 @@ This is powerful UI components library for your ActionScript3.0 programming.
 - Scene management.
 
 ## More details
-If you want to know in detail, see the [document](https://github.com/satoshi-takano/as3-IntegratedFramework/tree/master/asdoc)
+If you want to know in detail, see the [document](https://github.com/satoshi-takano/as3-IntegratedFramework/tree/master/doc)

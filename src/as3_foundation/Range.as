@@ -57,5 +57,9 @@ package as3_foundation
 		public function contains(val:Number):Boolean {
 			return (min <= val && val <= max);
 		}
+        
+        public function random():int {
+            return min + Math.floor(Math.random() * max);
+        }
 	}
 }

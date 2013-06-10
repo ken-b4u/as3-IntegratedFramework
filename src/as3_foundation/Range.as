@@ -59,7 +59,7 @@ package as3_foundation
 		}
         
         public function random():int {
-            return min + Math.floor(Math.random() * max);
+            return min + Math.floor(Math.random() * (max - min));
         }
 	}
 }

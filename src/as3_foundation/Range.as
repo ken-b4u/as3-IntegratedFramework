@@ -61,5 +61,9 @@ package as3_foundation
         public function random():int {
             return min + Math.floor(Math.random() * (max - min));
         }
+        
+        public function center():Number {
+            return min + (max - min) * 0.5;
+        }
 	}
 }

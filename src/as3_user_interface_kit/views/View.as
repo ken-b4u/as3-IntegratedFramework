@@ -87,6 +87,13 @@ package as3_user_interface_kit.views
 			else super.removeChild(child);
 			return child;
 		}
+        
+        /**
+        * すべての子要素をDisplayTreeから削除します. 
+        */
+        public function removeAllChildren():void {
+            while (this.numChildren) this.removeChild(this.getChildAt(0));
+        }
 		
 		private function removeFromSuper(child:DisplayObject):void{
 				super.removeChild(child);

@@ -1,5 +1,8 @@
 package as3_audio_visual_kit
 {
+	import as3_animation_kit.Animator;
+	import as3_animation_kit.IEasing;
+	
 	import as3_foundation.Performer;
 	
 	import flash.events.Event;
@@ -9,9 +12,6 @@ package as3_audio_visual_kit
 	import flash.media.SoundLoaderContext;
 	import flash.media.SoundTransform;
 	import flash.net.URLRequest;
-	
-	import as3_animation_kit.Animator;
-	import as3_animation_kit.IEasing;
 	
 	public class Audio extends Sound implements IAudioSource
 	{
@@ -116,6 +116,9 @@ package as3_audio_visual_kit
 			anim.update(new Performer(this, function():void{
 				_channel.soundTransform = _tsfm;
 			}));
+            anim.complete(new Performer(this, function():void {
+                _channel.stop();
+            })
 		}
 		
 		public function set volume(vol:Number):void {

@@ -118,7 +118,7 @@ package as3_audio_visual_kit
 			}));
             anim.complete(new Performer(this, function():void {
                 _channel.stop();
-            })
+            }));
 		}
 		
 		public function set volume(vol:Number):void {

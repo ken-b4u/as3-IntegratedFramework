@@ -36,6 +36,10 @@ package as3_audio_visual_kit
 			_channel = super.play(startTime, loops, sndTransform);
 			if (_channel) {
 				_channel.soundTransform = sndTransform || _tsfm;
+                if (sndTransform) {
+                    _tsfm.volume = sndTransform.volume;
+                    _tsfm.pan = sndTransform.pan;
+                }
 				_channel.addEventListener(Event.SOUND_COMPLETE, soundComp);
 			}
 			_isPlaying = true;
@@ -80,7 +84,11 @@ package as3_audio_visual_kit
 			
 			_channel = super.play(startTime, loops, sndTransform);
 			if (_channel) {
-				_channel.soundTransform = _tsfm;
+                _channel.soundTransform = sndTransform || _tsfm;
+                if (sndTransform) {
+                    _tsfm.volume = sndTransform.volume;
+                    _tsfm.pan = sndTransform.pan;
+                }
 				_channel.addEventListener(Event.SOUND_COMPLETE, soundComp);
 			}
 			

@@ -35,7 +35,7 @@ package as3_audio_visual_kit
 			
 			_channel = super.play(startTime, loops, sndTransform);
 			if (_channel) {
-				_channel.soundTransform = _tsfm;
+				_channel.soundTransform = sndTransform || _tsfm;
 				_channel.addEventListener(Event.SOUND_COMPLETE, soundComp);
 			}
 			_isPlaying = true;
